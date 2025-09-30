@@ -68,5 +68,20 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation ("com.example.flutter_module_1:flutter_debug:1.0")
+    releaseImplementation("com.example.flutter_module_1:flutter_release:1.0")
+
+}
+
+val storageUrl = "https://storage.googleapis.com"
+repositories {
+    maven {
+        url = uri("/Users/lsq/gitfile/KMP-App-Template-Native/flutter/flutter_module_1/build/host/outputs/repo")
+    }
+    maven {
+        url = uri("$storageUrl/download.flutter.io")
+    }
+    mavenCentral()
 }
